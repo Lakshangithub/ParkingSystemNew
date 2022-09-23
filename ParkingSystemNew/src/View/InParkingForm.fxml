@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="VehicleDetailsContext" prefHeight="491.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.InParkingFormController">
+    <children>
+        <Label prefHeight="42.0" prefWidth="895.0" style="-fx-background-color: #1abc9c;" text="Parking System">
+            <font>
+                <Font name="Bell MT" size="30.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="cmbInParking" layoutX="101.0" layoutY="83.0" prefWidth="150.0" />
+        <Button fx:id="btnAddVehicle" layoutX="370.0" layoutY="83.0" mnemonicParsing="false" onAction="#SetAddVehicleOnAction" text="Add Vehicle" />
+        <Button fx:id="btnLogOut" layoutX="687.0" layoutY="83.0" mnemonicParsing="false" onAction="#LogOutOnAction" text="Log Out" />
+        <Button fx:id="btnAddDriver" layoutX="537.0" layoutY="83.0" mnemonicParsing="false" onAction="#SetAddDriverOnAction" text="Add Driver" />
+        <TableView fx:id="tblVehicleDetails" layoutX="101.0" layoutY="166.0" prefHeight="242.0" prefWidth="660.0">
+            <columns>
+                <TableColumn fx:id="colVehicleNumber" prefWidth="175.0" text="Vehicle Number" />
+                <TableColumn fx:id="colVehicleType" prefWidth="166.0" text="Vehicle Type" />
+                <TableColumn fx:id="colParkingSlot" prefWidth="163.0" text="Parking Slot" />
+                <TableColumn fx:id="colParkedTime" prefWidth="155.0" text="Parked Time" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
